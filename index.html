@@ -4,6 +4,15 @@
 
 <head>
   <meta charset="utf-8" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+
   <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
 
@@ -12,32 +21,50 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
 
   <!-- Firepad -->
-  <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
-  <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+  <link rel="stylesheet" href="css/firepad.css" />
+  <script src="js/firepad.min.js"></script>
 
   <!-- Include example userlist script / CSS.
        Can be downloaded from: https://github.com/firebase/firepad/tree/master/examples/ -->
-  <script src="firepad-userlist.js"></script>
-  <link rel="stylesheet" href="firepad-userlist.css" />
+  <script src="js/firepad-userlist.js"></script>
+  <link rel="stylesheet" href="css/firepad-userlist.css" />
+  <link rel="stylesheet" href="css/hackpad.css" />
 
-  <style>
-    html { height: 100%; }
-    body { margin: 0; height: 100%; }
-    /* Height / width / positioning can be customized for your use case.
-       For demo purposes, we make the user list 175px and firepad fill the rest of the page. */
-    #userlist {
-      position: absolute; left: 0; top: 0; bottom: 0; height: auto;
-      width: 175px;
-    }
-    #firepad {
-      position: absolute; left: 175px; top: 0; bottom: 0; right: 0; height: auto;
-    }
-  </style>
 </head>
 
 <body onload="init()">
-  <div id="userlist"></div>
-  <div id="firepad"></div>
+
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Hackpad</a>
+          <a class="navbar-brand" id="title" href="#"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="../all.html">All Pads</a></li>
+            <li><a href="#">New Pad</a></li>
+            <li><a href="#">Login</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+
+<div class="container-fluid" id="main_container">
+   <div class="row">
+    <div class="col-lg-2 no-float" id="userlist">
+
+    </div>
+    <div id="firepad" class="col-lg-10 no-float"> </div>
+</div>
+
+</div>
+
+  <!-- Latest compiled and minified JavaScript -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <script>
     function init() {

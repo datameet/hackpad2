@@ -1,15 +1,9 @@
 .firepad-userlist {
   /* default height */
-  height: 99%;
+  /*height: 99%;*
   min-width: 175px;
-
-  background: #ebebeb; /* Old browsers */
-  background: -moz-linear-gradient(left, #ebebeb 0%, #eaeaea 93%, #d9d9d9 100%); /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ebebeb), color-stop(93%,#eaeaea), color-stop(100%,#d9d9d9)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(left, #ebebeb 0%,#eaeaea 93%,#d9d9d9 100%); /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(left, #ebebeb 0%,#eaeaea 93%,#d9d9d9 100%); /* Opera 11.10+ */
-  background: -ms-linear-gradient(left, #ebebeb 0%,#eaeaea 93%,#d9d9d9 100%); /* IE10+ */
-  background: linear-gradient(to right, #ebebeb 0%,#eaeaea 93%,#d9d9d9 100%); /* W3C */
+  */
+  background: #f8f8f8;
   color: #404040;
 }
 
@@ -30,7 +24,7 @@
   position: absolute;
   left: 15px;
   right: 15px;
-  top: 38px;
+  top: 70px;
   bottom: 10px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -39,7 +33,7 @@
 .firepad-userlist-user {
   position: relative;
   margin: 3px 0;
-  height: 32px;
+  height: 42px;
   border-bottom: 1px solid #c9c9c9;
   padding-bottom: 5px;
 }
@@ -74,7 +68,7 @@ input.firepad-userlist-name-input {
   position: absolute;
   left: 38px;
   top: 23px;
-  width: 300px; /* I'd rather it clip than wrap. */
+  width: 150px; /* I'd rather it clip than wrap. */
   font-size: 9px;
   line-height: 11px;
 }
